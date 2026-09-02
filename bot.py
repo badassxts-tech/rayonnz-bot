@@ -3,6 +3,7 @@ from discord.ext import commands
 import asyncio
 import yt_dlp as youtube_dl
 import os
+from keep_alive import keep_alive
 
 # === KONFIGURASI ===
 PREFIX = "!"  # bisa diganti sesuai keinginan
@@ -205,4 +206,5 @@ if __name__ == "__main__":
     if TOKEN is None:
         print("Error: TOKEN environment variable belum diatur.")
     else:
+        keep_alive()
         bot.run(TOKEN)
